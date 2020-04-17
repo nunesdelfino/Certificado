@@ -15,7 +15,6 @@ from Modulos.GerarQRCode import GerarQR
 from Modulos.ImportarCSV import Importar
 from Modulos.Ajuda import Ajuda
 
-
 AjudaEscolha = str(input("Quer exibir a ajuda? [S - Para mostrar] ")).lower()
 if (AjudaEscolha == "s"):
     Ajuda() # Exibe a ajuda
