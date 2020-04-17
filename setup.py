@@ -9,12 +9,10 @@
 # IMPORTAÇÕES
 
 from Modulos.AssinanteEvento import Assinante
-from Modulos.CriaPasta import CriarPasta
 from Modulos.GerarCertificado import Gerar
 from Modulos.GerarNome import NomeCertificado
 from Modulos.GerarQRCode import GerarQR
 from Modulos.ImportarCSV import Importar
-from Modulos.MoverCertificados import Mover
 from Modulos.Ajuda import Ajuda
 
 
