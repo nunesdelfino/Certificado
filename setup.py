@@ -22,9 +22,7 @@ AjudaEscolha = str(input("Quer exibir a ajuda? [S - Para mostrar] ")).lower()
 if (AjudaEscolha == "s"):
     Ajuda() # Exibe a ajuda
 
-# Assinante = Assinante() # Coleta o nome do assinante do certificado
-# GerarQR() # Gerar o QR Code para validar o Certificado
-# Dados = Importar() # Importa os dados do arquvio CSV
-# Gerar(Dados, Assinante) # Gera o Certificado
-# CriarPasta() # Cria a pasta Certificados na raiz de onde o script foi executado
-# Mover() # Mover os certificados para dentro da pasta Certificados que foi criada
+Assinante = Assinante() # Coleta o nome do assinante do certificado
+GerarQR() # Gerar o QR Code para validar o Certificado
+Dados = Importar() # Importa os dados do arquvio CSV
+Gerar(Dados, Assinante) # Gera o Certificado
