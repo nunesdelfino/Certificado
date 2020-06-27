@@ -1,25 +1,21 @@
-#!/bin/python3
+#!/bin/bash
 # -*- coding: utf-8 -*-
 
 # Gerador de certificados
 # Autor: Gabriel Nunes Delfino
 # github: nunesdelfino
 
-
 # IMPORTAÇÕES
 
-from Modulos.AssinanteEvento import Assinante
-from Modulos.GerarCertificado import Gerar
-from Modulos.GerarNome import NomeCertificado
+from Modulos.Tela import TelaInicial
 from Modulos.GerarQRCode import GerarQR
 from Modulos.ImportarCSV import Importar
-from Modulos.Ajuda import Ajuda
+from Modulos.GerarCertificado import GerarCertificado
 
-AjudaEscolha = str(input("Quer exibir a ajuda? [S - Para mostrar] ")).lower()
-if (AjudaEscolha == "s"):
-    Ajuda() # Exibe a ajuda
+Dados = []
 
-Assinante = Assinante() # Coleta o nome do assinante do certificado
-GerarQR() # Gerar o QR Code para validar o Certificado
-Dados = Importar() # Importa os dados do arquvio CSV
-Gerar(Dados, Assinante) # Gera o Certificado
+Dados = TelaInicial().RetornaValores()
+
+GerarQR(Dados[4]) # Gerar o QR Code para validar o Certificado
+DadosCSV = Importar(Dados[0]) # Importa os dados do arquvio CSV
+GerarCertificado().Gerar(DadosCSV, Dados[1], Dados[2], Dados[3], Dados[5]) # Gera o Certificado
