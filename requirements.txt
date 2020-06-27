@@ -1,0 +1,4 @@
+PySimpleGui==4.20.0
+PyQRCode==1.2.1
+reportlab==3.5.42
+PyPNG==0.0.20
