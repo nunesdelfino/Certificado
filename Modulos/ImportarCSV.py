@@ -1,15 +1,14 @@
 # IMPORTAÇÕES
 import csv
 
-def Importar(): # Função para Importar os dados de um arquivo CSV em lista e retorna a lista
+def Importar(CaminhoArquivo): # Função para Importar os dados de um arquivo CSV em lista e retorna a lista
     try:
-        NomeArquivo = "Certi.csv" # Nome do arquivo
-        arquivo = open(NomeArquivo) # Importar CSV
-        dados = csv.reader(arquivo) # Le como lista
-        return dados # retorna os dados importados 
+        Arquivo = open(CaminhoArquivo) # Importar CSV
+        Dados = csv.reader(Arquivo) # Le como lista
+        return Dados # retorna os dados importados 
     except FileNotFoundError:
-        print("Arquivo não encontrado: ", NomeArquivo)
+        print("Arquivo não encontrado: ", CaminhoArquivo)
         exit()
     except:
-        print("Erro na importação do arquivo: ", NomeArquivo)
+        print("Erro na importação do arquivo: ", CaminhoArquivo)
         exit()
