@@ -4,7 +4,7 @@ class TelaInicial:
 
     NomeTela = "Gerar Certificados"
     TamTexto = 29
-    TamBotArq = 10
+    TamBotArq = 12
     TamCamEntrada = 30
     TamCamArq = 30
 
